@@ -11,6 +11,7 @@ export class UsersComponent implements OnInit {
   showExtended:boolean = true;
   loaded:boolean = false;
   enableAdd:boolean = true;
+  currentClasses = {};
 
   constructor() { }
 
@@ -18,7 +19,7 @@ export class UsersComponent implements OnInit {
 
       this.users = [
         {
-          firstName:'Jon',
+          firstName:'Jane',
           lastName:'Doe',
           age:25,
           address:{
@@ -27,7 +28,8 @@ export class UsersComponent implements OnInit {
             state:'Karnataka'
           },
           //lorempixel is a website which generates images (400,400 is dimension of the image, people is the category of the image)
-          image: 'http://lorempixel.com/400/400/people/3'
+          image: 'http://lorempixel.com/400/400/people/9',
+          isActive:true
         },
         {
           firstName:'Na',
@@ -38,7 +40,8 @@ export class UsersComponent implements OnInit {
             city:'Mysuru',
             state:'Karnataka'
           },
-          image: 'http://lorempixel.com/400/400/people/2'
+          image: 'http://lorempixel.com/400/400/people/2',
+          isActive:false
         },
         {
           firstName:'Ra',
@@ -49,7 +52,8 @@ export class UsersComponent implements OnInit {
             city:'Tumakuru',
             state:'Karnataka'
           },
-          image: 'http://lorempixel.com/400/400/people/1'
+          image: 'http://lorempixel.com/400/400/people/1',
+          isActive:true
         }
       ];
       this.loaded = true;
@@ -60,10 +64,18 @@ export class UsersComponent implements OnInit {
     //   lastName:'Sh'
     // });
 
+    this.setCurrentClasses();
   }
 
   addUser(user:User){
     console.log(this.users.push(user))
+  }
+
+  setCurrentClasses(){
+    this.currentClasses = {
+      'btn-success': this.enableAdd,
+      'big-text': this.showExtended
+    }
   }
 
 }
