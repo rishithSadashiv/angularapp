@@ -30,7 +30,9 @@ export class UsersComponent implements OnInit {
           },
           //lorempixel is a website which generates images (200,200 is dimension of the image, people is the category of the image)
           image: 'http://lorempixel.com/200/200/people/9',
-          isActive:true
+          isActive:true,
+          balance:100,
+          registered: new Date('01/11/2020 00:49:40 ')
         },
         {
           firstName:'Na',
@@ -42,7 +44,9 @@ export class UsersComponent implements OnInit {
             state:'Karnataka'
           },
           image: 'http://lorempixel.com/200/200/people/2',
-          isActive:false
+          isActive:false,
+          balance:200,
+          registered: new Date('01/10/2020 10:49:40 ')
         },
         {
           firstName:'Ra',
@@ -54,7 +58,9 @@ export class UsersComponent implements OnInit {
             state:'Karnataka'
           },
           image: 'http://lorempixel.com/200/200/people/1',
-          isActive:true
+          isActive:true,
+          balance:6,
+          registered: new Date('08/08/2020 09:07:00')
         }
       ];
       this.loaded = true;
