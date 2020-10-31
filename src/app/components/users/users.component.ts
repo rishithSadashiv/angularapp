@@ -10,6 +10,7 @@ export class UsersComponent implements OnInit {
   users:User[];
   showExtended:boolean = true;
   loaded:boolean = false;
+  enableAdd:boolean = true;
 
   constructor() { }
 
@@ -24,7 +25,9 @@ export class UsersComponent implements OnInit {
             street:'10th cross',
             city:'Bengaluru',
             state:'Karnataka'
-          }
+          },
+          //lorempixel is a website which generates images (400,400 is dimension of the image, people is the category of the image)
+          image: 'http://lorempixel.com/400/400/people/3'
         },
         {
           firstName:'Na',
@@ -34,7 +37,8 @@ export class UsersComponent implements OnInit {
             street:'8th cross',
             city:'Mysuru',
             state:'Karnataka'
-          }
+          },
+          image: 'http://lorempixel.com/400/400/people/2'
         },
         {
           firstName:'Ra',
@@ -44,16 +48,17 @@ export class UsersComponent implements OnInit {
             street:'7th cross',
             city:'Tumakuru',
             state:'Karnataka'
-          }
+          },
+          image: 'http://lorempixel.com/400/400/people/1'
         }
       ];
       this.loaded = true;
     
     
-    this.addUser({
-      firstName:'Am',
-      lastName:'Sh'
-    });
+    // this.addUser({
+    //   firstName:'Am',
+    //   lastName:'Sh'
+    // });
 
   }
 
