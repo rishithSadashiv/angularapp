@@ -1,0 +1,18 @@
+Bootstrap Installation (jquery and popper.js are dependencies that are required) (didnt work)
+  1. npm install bootstrap@4.0.0-beta.2 jquery popper.js
+    (run the commands that the terminal asks like npm audit and npm fund)
+  2. change bootstrap version from "^4.0.0-beta.2" to "4.0.0-beta.2" (removed '^') so that the version is not auto-updated in the future.
+  3. In angular.json or .angular-cli.json file, add the following
+    a. In "styles"
+      ,"node_modules/bootstrap/dist/css/bootstrap.css"
+    b. In "scripts"
+      "node_modules/jquery/dist/jquery.js",
+      "node_modules/popper.js/dist/umd/popper.js",
+      "node_modules/bootstrap/dist/js/bootstrap.js"
+
+  2. Using Bootstrap-CDN: Copy the following lines into index.html file.
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
