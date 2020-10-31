@@ -12,6 +12,7 @@ export class UsersComponent implements OnInit {
   loaded:boolean = false;
   enableAdd:boolean = true;
   currentClasses = {};
+  currentStyles = {};
 
   constructor() { }
 
@@ -27,8 +28,8 @@ export class UsersComponent implements OnInit {
             city:'Bengaluru',
             state:'Karnataka'
           },
-          //lorempixel is a website which generates images (400,400 is dimension of the image, people is the category of the image)
-          image: 'http://lorempixel.com/400/400/people/9',
+          //lorempixel is a website which generates images (200,200 is dimension of the image, people is the category of the image)
+          image: 'http://lorempixel.com/200/200/people/9',
           isActive:true
         },
         {
@@ -40,7 +41,7 @@ export class UsersComponent implements OnInit {
             city:'Mysuru',
             state:'Karnataka'
           },
-          image: 'http://lorempixel.com/400/400/people/2',
+          image: 'http://lorempixel.com/200/200/people/2',
           isActive:false
         },
         {
@@ -52,7 +53,7 @@ export class UsersComponent implements OnInit {
             city:'Tumakuru',
             state:'Karnataka'
           },
-          image: 'http://lorempixel.com/400/400/people/1',
+          image: 'http://lorempixel.com/200/200/people/1',
           isActive:true
         }
       ];
@@ -65,6 +66,7 @@ export class UsersComponent implements OnInit {
     // });
 
     this.setCurrentClasses();
+    this.setCurrentStyles();
   }
 
   addUser(user:User){
@@ -75,6 +77,14 @@ export class UsersComponent implements OnInit {
     this.currentClasses = {
       'btn-success': this.enableAdd,
       'big-text': this.showExtended
+    }
+  }
+
+  setCurrentStyles(){
+    this.currentStyles = {
+      'padding-top' : this.showExtended ? '0' : '40px',
+      'font-size' : this.showExtended ? '' : '40px'
+      
     }
   }
 
