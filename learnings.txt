@@ -30,3 +30,5 @@ Usage of ngModel (2 way data binding)
   need to import FormsModule from angular/Forms in app.module.ts to avoid error
   add it in the imports array as well.
   also need name attribute in the input tag inside the form
+
+Form validation and submission: refer to the videos again

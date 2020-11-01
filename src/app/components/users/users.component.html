@@ -58,7 +58,7 @@
     <div [hidden]="!userEmail.errors?.pattern" class="invalid-feedback">
       Email is not valid
     </div>    </div>
-    <button (click)="addUser()" [disabled]="!userForm.form.valid" class="btn btn-block mb-2" >Add New User</button> <!--other events: mouseover, mouseout, mousedown, mouseup, dblclick, drag, dragover -->
+    <button [disabled]="!userForm.form.valid" class="btn btn-block mb-2" >Add New User</button> <!--other events: mouseover, mouseout, mousedown, mouseup, dblclick, drag, dragover -->
   </form>
 </div>
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0">
