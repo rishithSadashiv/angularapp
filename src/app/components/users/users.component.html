@@ -2,8 +2,8 @@
 <button (click)="addUser({firstName: 'Am', lastName: 'Sh', isActive: true})" [disabled]="!enableAdd" class="btn btn-block mb-2" >Add New User</button> <!--other events: mouseover, mouseout, mousedown, mouseup, dblclick, drag, dragover -->
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0">
   <li class="card card-body mb-2" *ngFor='let user of users' [class.bg-light]="user.isActive" [style.border-color]="user.isActive ? 'green' : ''">
-      <h4>{{ user.firstName}} {{ user.lastName }}</h4>
-      <ul class="list-group" *ngIf="showExtended && user.age && user.address">
+      <h4>{{ user.firstName}} {{ user.lastName }} <small *ngIf="user.age && user.address"><button (click)="user.hide = !user.hide" class="btn-dark bnt-sm"><i [ngClass]="user.hide ? 'fa fa-plus' : 'fa fa-minus'"></i></button></small></h4>
+      <ul class="list-group" *ngIf="!user.hide && user.age && user.address">
         <li class="list-group-item ">Age: {{ user.age }}</li>
         <li class="list-group-item ">Address: {{ user.address.street }}, {{user.address.city}}, {{user.address.state}}</li>
         <li class="list-group-item ">Joined: {{user.registered | date}}</li>

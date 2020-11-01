@@ -16,3 +16,11 @@ Bootstrap Installation (jquery and popper.js are dependencies that are required)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+Install font-awesome
+  1. npm install font-awesome --save (didnt work)
+     paste the following in angular.json inside styles
+        "/node_modules/font-awesome/css/font-awesome.css"
+  2. Paste the CDN of font-awesome inside the head of index.html
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>

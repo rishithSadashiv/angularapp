@@ -8,7 +8,7 @@ import { User } from 'src/app/models/User';
 })
 export class UsersComponent implements OnInit {
   users:User[];
-  showExtended:boolean = false;
+  showExtended:boolean = true;
   loaded:boolean = false;
   enableAdd:boolean = true;
 
@@ -28,7 +28,8 @@ export class UsersComponent implements OnInit {
           },
           //lorempixel is a website which generates images (200,200 is dimension of the image, people is the category of the image)
           isActive:true,
-          registered: new Date('01/11/2020 00:49:40 ')
+          registered: new Date('01/11/2020 00:49:40 '),
+          hide: true
         },
         {
           firstName:'Na',
@@ -40,7 +41,9 @@ export class UsersComponent implements OnInit {
             state:'Karnataka'
           },
           isActive:false,
-          registered: new Date('01/10/2020 10:49:40 ')
+          registered: new Date('01/10/2020 10:49:40 '),
+          hide: true
+
         },
         {
           firstName:'Ra',
@@ -52,7 +55,8 @@ export class UsersComponent implements OnInit {
             state:'Karnataka'
           },
           isActive:true,
-          registered: new Date('08/08/2020 09:07:00')
+          registered: new Date('08/08/2020 09:07:00'),
+          hide: true
         }
       ];
       this.loaded = true;
@@ -64,10 +68,8 @@ export class UsersComponent implements OnInit {
     console.log(this.users.push(user))
   }
 
-  fireEvent(e){
-    // console.log('Button Clicked...');
-    // console.log(e);
-    console.log(e.type);
-  }
+  // toggleHide(user:User){
+  //   user.hide = !user.hide;
+  // }
 
 }
