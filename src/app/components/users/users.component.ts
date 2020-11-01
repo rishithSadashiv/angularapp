@@ -67,11 +67,7 @@ export class UsersComponent implements OnInit {
   // }
 
 
-  onSubmit(e){
-    console.log(123);
-    e.preventDefault();
+  onSubmit(){
+    
   }
-
-  
-
 }
