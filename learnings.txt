@@ -24,3 +24,9 @@ Install font-awesome
         "/node_modules/font-awesome/css/font-awesome.css"
   2. Paste the CDN of font-awesome inside the head of index.html
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+Usage of ngModel (2 way data binding)
+  need to import FormsModule from angular/Forms in app.module.ts to avoid error
+  add it in the imports array as well.
+  also need name attribute in the input tag inside the form
