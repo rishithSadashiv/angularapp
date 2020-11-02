@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/User'
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   users:User[];
+  data:Observable<any>
+
   constructor() { 
     this.users = [
       {
@@ -37,9 +40,8 @@ export class DataService {
     ];
   }
 
-  getUsers():User[]{
-    console.log('Fetching users from service...')
-    return this.users;
+  getUsers():Observable<User[]>{
+    return of(this.users);
   }
 
   addUser(user:User){
