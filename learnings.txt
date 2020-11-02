@@ -32,3 +32,13 @@ Usage of ngModel (2 way data binding)
   also need name attribute in the input tag inside the form
 
 Form validation and submission: refer to the videos again
+
+
+Creating services
+  ng g s services/data 
+  Next define the new service inside app.module.ts by adding the following
+    import {HttpClientModule} from "@angular/common/http";
+    import { DataService } from "./services/data.service";
+    In imports, add HttpClientModule
+    later, in providers, DataService
+
